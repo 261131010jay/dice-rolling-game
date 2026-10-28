@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dice Rolling Game</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+      
+    <h1>🎲 Dice Rolling Game 🎲</h1>
+               <h4> by jaydeep s.s.</h4>
+    <main class="game">
+
+        <!-- Top row: Two smileys -->
+        <div class="object-row">
+
+            <div id="smiley1" class="game-object">😀</div>
+
+            <div id="smiley2" class="game-object">😃</div>
+
+        </div>
+
+        <!-- Bottom row: Two dice -->
+        <div class="object-row">
+
+            <div id="dice1" class="game-object">⚀</div>
+
+            <div id="dice2" class="game-object">⚀</div>
+
+        </div>
+
+        <!-- Roll button -->
+        <button id="rollButton" type="button">
+            Roll Dice
+        </button>
+
+        <!-- Result -->
+        <h2 id="result" aria-live="polite">
+            Click the button to roll!
+        </h2>
+
+        <!-- History -->
+        <h3>Roll History</h3>
+
+        <ul id="history"></ul>
+
+    </main>
+
+</body>
+
+</html>

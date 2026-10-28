@@ -1,0 +1,188 @@
+/* Whole webpage */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 15px;
+}
+
+
+/* Main heading */
+
+h1 {
+    color: #bc7575;
+    font-size: 48px;
+    margin: 10px 0 35px;
+}
+
+
+/* Game layout */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+
+/* Two objects in each row */
+
+.object-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* Smiley and dice boxes */
+
+.game-object {
+    width: 105px;
+    height: 105px;
+
+    background-color: white;
+    border: 3px solid #a16a6a;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 55px;
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Rolling animation */
+
+.game-object.rolling {
+    animation: diceRoll 0.7s ease-in-out;
+}
+
+
+/* Animation movement */
+
+@keyframes diceRoll {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(90deg) scale(1.08);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(0.92);
+    }
+
+    75% {
+        transform: rotate(270deg) scale(1.08);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+/* Roll button */
+
+#rollButton {
+    margin-top: 5px;
+
+    padding: 12px 28px;
+
+    background-color: #84f439;
+    color: #222;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+#rollButton:hover {
+    background-color: #70d52d;
+}
+
+
+#rollButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* Result */
+
+#result {
+    color: #bc7575;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+
+/* History heading */
+
+h3 {
+    color: #84c439;
+    margin: 10px 0 0;
+}
+
+
+/* History list */
+
+#history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+#history li {
+    background-color: rgba(39, 148, 133, 0.735);
+    color: white;
+
+    padding: 9px;
+    margin: 7px auto;
+
+    max-width: 280px;
+    border-radius: 6px;
+}
+
+
+/* Mobile screen */
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .object-row {
+        gap: 20px;
+    }
+
+    .game-object {
+        width: 85px;
+        height: 85px;
+        font-size: 45px;
+    }
+
+    #result {
+        font-size: 20px;
+    }
+
+}
